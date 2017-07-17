@@ -65,10 +65,24 @@
 
     HTTP 404 : user not found (incorrect token)
 
-* POST /lock
+
+* GET /lock/{token}
 
 > Param
 
   token: user token [String]
 
-  ssid: device ssid
+  >  Response
+
+      HTTP 200 : is lock ?
+
+      HTTP 403 : 잠김
+
+      HTTP 500 : DB err
+
+
+* POST /lock
+
+> Param
+
+  token: user token [String]

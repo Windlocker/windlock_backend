@@ -1,0 +1,26 @@
+{
+  "name": "EMP-STS",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "dependencies": {
+    "Q": "*",
+    "async": "*",
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "ejs": "~2.4.1",
+    "express": "~4.13.4",
+    "mongoose": "*",
+    "morgan": "~1.7.0",
+    "multer": "*",
+    "passport": "*",
+    "passport-facebook-token": "*",
+    "passport-github-token": "*",
+    "passport-twitter-token": "*",
+    "randomstring": "*",
+    "serve-favicon": "~2.3.0"
+  }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>WindLocker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="WINDLOCKER/PC 관리 솔루션" />
+    <meta name="msapplication-TileColor" content="#00a1cf">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <link rel="stylesheet" href="./w3.css">
+    <link rel="stylesheet" href="./css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="./main.js"></script>
+    <style>
+input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  width: 4.05em;
+  font-size: 1em;
+}
+
+.input-wrapper, input[type="number"] {
+  font-family: monospace;
+  font-weight: bold;
+  color:black;
+  letter-spacing: .3em;
+}
+
+.input-wrapper {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: .2em;
+  font-size: 200%;
+}
+
+.input-wrapper:after {
+  content: "——————————————————————————————";
+  line-height: .3em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: initial;
+}
+    </style>
+</head>
+
+<body>
+    <div class="w3-bar w3-top w3-large" style="z-index:4;color:white;padding-top:5px;background: linear-gradient( to right, #00b5d4 20%,#00a1cf, #008eca );">
+        <a href="./main.html" class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey"><i class="fa fa-bars" style="font-size:7vw;"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;보호 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> <div class="w3-bar-item w3-right"><i class="fa fa-ellipsis-v" style="font-size:7vw;"></i></div>
+         </div>
+         
+        
+    <div class="bg w3-display-container w3-animate-opacity w3-text-white" style="background:#f1f1f1">
+        <div class="w3-display-middle w3-center">
+           
+           <div id="page1" >
+           <div class="w3-large w3-custom-box2 w3-animate-top " style="width:95vw;padding:4vw;margin:10vh 10px 10px 10px">
+           <h3 style="text-align:left;margin:0;color:skyblue">1/2</h3>
+           <img src="./img/file.png" class="w3-jumbo w3-animate-top"  width="90" alt="file" oncontextmenu="return false">
+           <br><br>
+               <h4 style="margin:0;font-weight:bold;color:grey">전송할 파일을 선택해주세요</h4>
+                  <br>
+               <div class="filebox"> <input class="upload-name" value="파일선택" disabled="disabled"> <label for="ex_filename">업로드</label> <input type="file" id="ex_filename" class="upload-hidden"> </div>
+
+               
+                   <br><br>   <br><br>  
+               
+                <p class="w3-large w3-center" id="page2_go"><a href="#" class="w3-button w3-blue w3-text-white" style="width:75vw">확인 및 인증 번호 발송</a></p>
+            <p class="w3-large w3-center"><a href="main.html" class="w3-button w3-blue w3-text-white" style="width:75vw">취소</a></p>
+            
+               
+        </div>
+           <br>
+            
+            
+        </div>
+             
+            
+           <div  id="page2" class="w3-large w3-custom-box2 w3-animate-top  w3-hide" style="width:95vw;padding:4vw;margin:10vh 10px 10px 10px">
+           <h3 style="text-align:left;margin:0;color:skyblue">2/2</h3>
+           <img src="./img/Logo_Gradient.png" class="w3-jumbo w3-animate-top"  width="180" alt="file" oncontextmenu="return false">
+           <br><br>
+               <h3 style="margin:0;font-weight:bold;color:black">인증 번호 확인</h3>
+               <h4 style="margin:0;font-weight:bold;color:grey">전송할 파일을 선택해주세요</h4>
+                  <br>
+              <div class="input-wrapper" >
+  <input pattern="[0-9]*" id="code" inputmode="numeric" type="number" style="color:black" >
+</div>
+
+               
+                   <br><br>   <br><br>  
+               
+                <p class="w3-large w3-center"><a href="#" class="w3-button w3-blue w3-text-white" style="width:75vw">인증 및 파일 전송</a></p>
+            <p class="w3-large w3-center"><a id="page1_go" href="#" class="w3-button w3-blue w3-text-white" style="width:75vw">취소</a></p>
+            
+               
+           <br>
+            
+            
+        </div>
+            
+        </div>
+    </div>
+</body>
+
+</html>

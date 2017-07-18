@@ -3,6 +3,8 @@ var logger = require('morgan');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
+var session = require('express-session');
+var sessionstore = require('sessionstore');
 var cookie = require('cookie');
 var path = require('path');
 var bodyParser = require('body-parser');
@@ -13,12 +15,15 @@ var rndString = require("randomstring");
 var fs = require('fs');
 var router = express.Router();
 var async = require('async');
+var CORS = require('cors')();
+
 require('./func');
 //module setting
 var db = require('./mongo');
 var passport = require('./passport')(db.Users);
 
-var port = process.env.PORT || 3002;
+var port = process.env.PORT || 3003;
+var store = sessionstore.createSessionStore();
 
 //set engin
 app.set('port', port);
@@ -34,15 +39,21 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(CORS);
+app.use( session( { store: store, secret: '쿠키먹고싶어요', saveUninitialized: true}));
 
 //router setting
-var index = require('./routes/index')(router);
-var users = require('./routes/users')(router, db.Users, passport);
-var auth = require('./routes/auth')(router, db.Users, passport, rndString);
-var open = require('./routes/open')(router, db.Users);
+var index = require('./routes/index')(express.Router());
+var menu = require('./routes/menu')(express.Router());
+var users = require('./routes/users')(express.Router(), db.Users, passport);
+var auth = require('./routes/auth')(express.Router(), db.Users, passport, rndString);
+var lock = require('./routes/lock')(express.Router(), db.Users);
+var upload = require('./routes/upload')(express.Router());
 
 //router setting
 app.use('/', index);
+app.use('/menu', menu);
+app.use('/upload', upload)
 app.use('/users', users);
 app.use('/auth', auth);
 app.use('/lock', lock);

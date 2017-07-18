@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>WindLocker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="WINDLOCKER/PC 관리 솔루션" />
+    <meta name="msapplication-TileColor" content="#00a1cf">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <link rel="stylesheet" href="./w3.css">
+    <link rel="stylesheet" href="./css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="./main.js"></script>
+</head>
+
+<body>
+    <div class="w3-bar w3-top w3-large" style="z-index:4;color:white;padding-top:5px;background: linear-gradient( to right, #00b5d4 20%,#00a1cf, #008eca );">
+        <a href="./main.html" class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey"><i class="fa fa-bars" style="font-size:7vw;"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;관리 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> <div class="w3-bar-item w3-right"><i class="fa fa-ellipsis-v" style="font-size:7vw;"></i></div>
+        <a id="use_go" class="w3-bar-item w3-button" style="width:50%; border-bottom: 5px solid white;">시스템 사용량</a>
+    <a id="log_go" class="w3-bar-item w3-button" style="width:50%">시스템 로그</a>
+         </div>
+         
+        
+    <div class="bg w3-display-container w3-animate-opacity w3-text-white" style="background:#f1f1f1">
+        <div class="w3-display-middle w3-left">
+           
+           <div id="system_log">
+            <div class="w3-large w3-custom-box2 w3-animate-left" style="width:95vw;padding:5vw;margin:60px 10px 10px 10px"> 
+                <h4 style="margin:0;font-weight:bold">CPU <i style="margin:0;color:lightgrey;font-size:14px;float:right">CPU 사양</i></h4> 
+                <p style="margin-bottom:0;font-size:14px;">이용률 x% 속도 xGHZ</p>
+                
+            </div>
+            
+            <div class="w3-large w3-custom-box2 w3-animate-left" style="width:95vw;padding:5vw;margin:10px"> 
+                <h4 style="margin:0;font-weight:bold">메모리 <i style="margin:0;color:lightgrey;font-size:14px;float:right">메모리 사양</i></h4> 
+                <p style="margin-bottom:0;font-size:14px;">사용중 xGB 사용가능 xGB</p>
+                
+            </div>
+            
+            <div class="w3-large w3-custom-box2 w3-animate-left" style="width:95vw;padding:5vw;margin:10px"> 
+                <h4 style="margin:0;font-weight:bold">디스크 <i style="margin:0;color:lightgrey;font-size:14px;float:right">디스크 사양</i></h4> 
+                <p style="margin-bottom:0;font-size:14px;">이용률 x% 응답속도 xms</p>
+                
+            </div>
+        </div>
+             
+              <div id="system_use" class="w3-large w3-custom-box2 w3-animate-top w3-hide" style="width:95vw;padding:5vw;margin:10px"> 
+                <h4 style="margin:0;font-weight:bold">날짜</h4>
+                <hr>
+               <img src="./img/danger.png" class="w3-jumbo w3-animate-top" style="display:inline;margin-right:10px;" width="30" alt="danger" oncontextmenu="return false" align="left"><b style="margin-bottom:5px;font-size:20px;">위험</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="margin-bottom:0;font-size:14px;font-weight:100">쓸 말 적어라</b>
+               
+               
+               <div style="margin:10px 0;">
+               <img src="./img/alert.png" class="w3-jumbo w3-animate-top" style="display:inline;margin-right:10px;" width="30" alt="alert" oncontextmenu="return false" align="left"><b style="margin-bottom:5px;font-size:20px;">경고</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="margin-bottom:0;font-size:14px;font-weight:100">쓸 말 적어라</b></div>
+              
+               <img src="./img/normal.png" class="w3-jumbo w3-animate-top" style="display:inline;margin-right:10px;" width="30" alt="normal" oncontextmenu="return false" align="left"><b style="margin-bottom:0;font-size:20px;">일반</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="margin-bottom:0;font-size:14px;font-weight:100">쓸 말 적어라</b>
+              
+                
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+</html>

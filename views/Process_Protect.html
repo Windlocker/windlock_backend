@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>WindLocker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="WINDLOCKER/PC 관리 솔루션" />
+    <meta name="msapplication-TileColor" content="#00a1cf">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <link rel="stylesheet" href="./w3.css">
+    <link rel="stylesheet" href="./css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="./main.js"></script>
+</head>
+
+<body>
+    <div class="w3-bar w3-top w3-large" style="z-index:4;color:white;padding-top:5px;background: linear-gradient( to right, #00b5d4 20%,#00a1cf, #008eca );">
+        <a href="./main.html" class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey"><i class="fa fa-bars" style="font-size:7vw;"></i>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;보호 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> <div class="w3-bar-item w3-right"><i class="fa fa-ellipsis-v" style="font-size:7vw;"></i></div>
+        <a id="use_go" class="w3-bar-item w3-button" style="width:50%; border-bottom: 5px solid white;">과부화 프로세스</a>
+    <a id="log_go" class="w3-bar-item w3-button" style="width:50%">파일 암호화</a>
+         </div>
+         
+        
+    <div class="bg w3-display-container w3-animate-opacity w3-text-white" style="background:#f1f1f1">
+        <div class="w3-display-middle w3-left">
+           
+           <div id="system_log" >
+           <div class="w3-large w3-custom-box2 w3-animate-top" style="width:95vw;padding:5vw;margin:10px">
+            <h4 style="margin:0;font-weight:bold">과부화 된 앱 및 프로세스</h4>
+                <hr>
+                
+               
+               
+            
+               
+        </div>
+           <br>
+            <p class="w3-large w3-center"><a href="#" class="w3-button w3-blue w3-text-white" style="width:65vw">프로세스 종료</a></p>
+            <p class="w3-large w3-center"><a href="main.html" class="w3-button w3-blue w3-text-white" style="width:65vw">취소</a></p>
+            
+            
+            
+        </div>
+              <div id="system_use" class="w3-animate-top w3-hide"> 
+                <div class="w3-large w3-custom-box2 w3-animate-top" style="width:95vw;padding:4vw;margin:18vh 10px 10px 10px"> <img src="./img/Lock_Gradient.png" class="w3-jumbo w3-animate-right" style="display:inline;margin-right:20px;" width="50" alt="Lock" oncontextmenu="return false" align="left">
+                <h4 style="margin:0;font-weight:bold">복원 가능 모드</h4>
+                <p style="margin-bottom:0;font-size:14px;">키를 이용해 복구가능하게 파일을 암호화합니다.</p>
+                <input pattern="[0-9]*" id="code" inputmode="numeric" type="number" placeholder="복원 키 입력" style="color:grey;border:none;border-bottom: 2px solid grey" >
+                <p class="w3-large w3-center"><button class="w3-button w3-blue w3-text-white" style="width:45vw;font-size:15px">현재 설정중</button></p>
+            </div>
+             
+              <div class="w3-large w3-custom-box2 w3-animate-top" style="width:95vw;padding:4vw;margin:10px"> <img src="./img/Lock_Gradient_NoReturn.png" class="w3-jumbo w3-animate-right" style="display:inline;margin-right:20px;" width="60" alt="Lock" oncontextmenu="return false" align="left">
+                <h4 style="margin:0;font-weight:bold">복원 불가능 모드</h4>
+                <p style="margin-bottom:0;font-size:14px;">파일을 암호화하여 복원 불가능하게 합니다.<br><small>*경고: 다시는 되돌릴 수 없습니다.*</small></p>
+              
+                <p class="w3-large w3-center"><button class="w3-button w3-blue w3-text-white" style="width:45vw;font-size:15px">설정하기</button>
+            </div>
+
+            <p class="w3-large w3-center"><a href="main.html" class="w3-button w3-blue w3-text-white" style="width:65vw">저장 후 암호화</a></p>
+            <p class="w3-large w3-center"><a href="main.html" class="w3-button w3-blue w3-text-white" style="width:65vw">취소</a></p>
+              
+                
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+</html>

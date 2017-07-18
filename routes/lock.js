@@ -1,9 +1,12 @@
 module.exports = (router, Users)=>{
-
   router.get('/:token', (req, res)=>{
-    Users.findOne({token: req.body.token}, (err, user)=>{
+    Users.findOne({token: req.body.token}, (err, users)=>{
         if(err) return res.status(500).send("DB err");
-        if(user.open) return res.sendStatus(200);
+        if(users){
+	 if(users.open){
+	  return res.status(200).send("a");
+	 }
+ 	}
         else return res.sendStatus(403);
     });
   });
@@ -11,7 +14,7 @@ module.exports = (router, Users)=>{
     Users.findOne({token: req.body.token}, (err, users)=>{
       if(err) res.status(500).send("DB err");
       if(users){
-      Users.update({token: req.body.token},{$set: {open: !users.open}}, (err, result)=>{
+      Users.update({token: req.body.token},{$set: {"open": !users.open}}, (err, result)=>{
         if(err) return res.status(500).send("DB err");
         if(users) return res.status(200).send("su");
         else return res.status(412).send("nope");

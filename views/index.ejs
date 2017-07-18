@@ -1,11 +1,112 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WindLocker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="WINDLOCKER/PC 관리 솔루션" />
+<meta name="msapplication-TileColor" content="#00a1cf">
+<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+<link rel="stylesheet" href="./w3.css">
+<link rel="stylesheet" href="./css">
+<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head><body>
+
+<div class="bg w3-display-container w3-animate-opacity w3-text-white">
+
+  <div id="fisrt_screen" class="w3-display-middle">
+
+    <img src="./img/logo_and_type.png" class="w3-jumbo w3-animate-top" style="height:30vh; margin-bottom: 15%;" alt="LOGO" oncontextmenu="return false">
+
+    <p class="w3-large w3-center"><button class="w3-button w3-border w3-border-white login_go">시작하기</button>
+
+    <br><br>
+
+    <button class="w3-button w3-border w3-border-white" onclick="window.open('about:blank','_self').close();">종료</button>
+    </p>
+
+  </div>
+
+
+  <!--디바이스 창 로그인 후 띄우는 창?-->
+
+
+  <div id="Device_Check" class="w3-display-middle w3-center w3-hide">
+
+    <img src="./img/LogoType.png" class="w3-jumbo w3-animate-top" style="width:50vw; margin-bottom: 10%;" alt="LOGO_text" oncontextmenu="return false">
+
+    <div class="w3-large w3-device-box">
+
+        <h4 class="w3-center">디바이스 등록</h4>
+        <br>
+        <div style="height:25vh;text-align:left!important;padding-left:7vw" >
+        디바이스 이름: 서버처리해야딤
+        <br>
+        연결된 SSID:
+        </div>
+
+
+    <br>
+    <p class="w3-center w3-small" style="opacity:0.5";>위 정보가 맞다면 진행하셔도 좋습니다.</p>
+    </div>
+
+   <br>
+    <p class="w3-large w3-center"> <a href="./main.html" class="w3-button w3-custom-box" style="width:80vw">메인으로 돌아가기</a>
+
+    <br><br>
+
+    <button class="w3-button w3-custom-box" onclick="">다른 디바이스 추가</button>
+    </p>
+
+      <p class="w3-center" id="first_go">초기 화면으로 돌아가기</p>
+
+  </div>
+
+  <!--로그인-->
+   <div id="Loginpage" class="w3-display-middle w3-center w3-hide">
+
+    <img src="./img/logo_and_type.png" class="w3-jumbo w3-animate-top" style="height:25vh; margin-bottom: 15%;" alt="LOGO" oncontextmenu="return false">
+
+
+   <br>
+
+
+    <p class="w3-large w3-center">
+     <input class="w3-button w3-custom-box" placeholder="아이디" style="margin-bottom:20px;" type="text" id="user_id" />
+     <input class="w3-button w3-custom-box" placeholder="비밀번호" style="margin-bottom:20px;" type="password" id="user_pw" />
+    <button class="w3-button w3-custom-box" style="width:80vw" id="login">로그인</button>
+
+    <br>
+
+    </p>
+       <p class="w3-center w3-large">오프라인 모드 &nbsp;| &nbsp;<a class="reg_go">회원 가입</a></p>
+      <p class="w3-center w3-small" onclick="myFunction()">비밀번호를 잊어버리셨나요?</p>
+  </div>
+
+<!-- 회원가입 -->
+   <div id="registerpage" class="w3-display-middle w3-center w3-hide">
+
+    <img src="./img/logo_and_type.png" class="w3-jumbo w3-animate-left" style="height:25vh; margin-bottom: 15%;" alt="LOGO" oncontextmenu="return false">
+
+
+   <br>
+
+
+    <p class="w3-large w3-center">
+     <input class="w3-button w3-custom-box"  placeholder="닉네임"  style="margin-bottom:20px;" type="text" id="auth_name" />
+     <input class="w3-button w3-custom-box"  placeholder="아이디" style="margin-bottom:20px;" type="text" id="auth_id" />
+     <input class="w3-button w3-custom-box"  placeholder="비밀번호" style="margin-bottom:20px;" type="password" id="auth_pw" />
+     <button class="w3-button w3-custom-box"  style="width:80vw" id="signup">가입하기</button>
+
+    <br>
+    <br>
+    </p>
+
+      <p class="w3-center w3-small login_go">로그인으로 돌아가기</p>
+
+  </div>
+
+</div>
+<script src="/main.js"></script>
+</body>
 </html>

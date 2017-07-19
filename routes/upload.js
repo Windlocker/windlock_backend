@@ -10,10 +10,9 @@ var upload = (req, res, token) => {
     },
         // 서버에 저장할 파일 명
     filename: function (req, file, cb) {
-      var token = req.body.token;
 
       file.uploadedFile = {
-        name: token,
+        name: file.originalname.split('.')[0],
         ext: file.mimetype.split('/')[1]
       };
 
@@ -33,15 +32,29 @@ var upload = (req, res, token) => {
 };
 
 
-module.exports = (router)=>{
-  router.get('/', function(req, res, next) {
+module.exports = (router, rndString)=>{
+  var pincode = [];
+  router.post('/', function(req, res, next) {
     upload(req, res).then(function (file) {
-      return res.status(200).send("suck");
+      var Npincode = rndString.generate(4);
+      pincode[Npincode] = file.name+"."+file.ext;
+      return res.status(200).send(Npincode);
     }, function (err) {
       if(err) return res.status(409).send(err);
     });
-  })
   });
 
+  router.get('/sync/:pincode', (req, res)=>{
+    var pincodee = req.params.pincode;
+    var file = pincode[pincodee];
+    if(file === "" || file == undefined) return res.status(404).send("이미사용한 sync번호입니다");
+    res.download("upload/"+file);
+  })
+  .get('/name/:pincode', (req, res)=>{
+     var pincodee = req.params.pincode;
+     var file = pincode[pincodee];
+     return res.status(200).send(file);
+    pincode[pincodee] = "";
+   });
   return router;
 }

@@ -22,7 +22,7 @@ require('./func');
 var db = require('./mongo');
 var passport = require('./passport')(db.Users);
 
-var port = process.env.PORT || 3003;
+var port = process.env.PORT || 3002;
 var store = sessionstore.createSessionStore();
 
 //set engin
@@ -48,7 +48,7 @@ var menu = require('./routes/menu')(express.Router());
 var users = require('./routes/users')(express.Router(), db.Users, passport);
 var auth = require('./routes/auth')(express.Router(), db.Users, passport, rndString);
 var lock = require('./routes/lock')(express.Router(), db.Users);
-var upload = require('./routes/upload')(express.Router());
+var upload = require('./routes/upload')(express.Router(), rndString);
 
 //router setting
 app.use('/', index);

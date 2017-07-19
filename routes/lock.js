@@ -1,13 +1,14 @@
 module.exports = (router, Users)=>{
   router.get('/:token', (req, res)=>{
-    Users.findOne({token: req.body.token}, (err, users)=>{
+    Users.findOne({token: req.params.token}, (err, users)=>{
         if(err) return res.status(500).send("DB err");
         if(users){
-	 if(users.open){
+	  console.log(users.open);
+	 if(users.open)
 	  return res.status(200).send("a");
-	 }
- 	}
+	 
         else return res.sendStatus(403);
+ 	}
     });
   });
   router.post('/', function(req, res, next) {

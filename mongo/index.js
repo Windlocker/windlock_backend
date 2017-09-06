@@ -15,7 +15,9 @@ var UsersSchema = mongoose.Schema({
   ssid: {type: String},
   device_name: {type: String},
   pincode: {type: String},
-  restore_key: {type: String}
+  restore_key: {type: String},
+  auth_token: {type: String},
+  is_cert: {type: Boolean, default: 0}
 });
 
 exports.Users = mongoose.model("users", UsersSchema);

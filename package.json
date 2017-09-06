@@ -16,11 +16,14 @@
     "mongoose": "*",
     "morgan": "~1.7.0",
     "multer": "*",
+    "nodemailer": "^4.1.0",
+    "nodemailer-smtp-pool": "^2.8.3",
     "passport": "*",
     "passport-facebook-token": "*",
     "passport-github-token": "*",
     "passport-twitter-token": "*",
     "randomstring": "*",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "unirest": "^0.5.1"
   }
 }
